@@ -1,0 +1,22 @@
+<idea-plugin>
+     <id>com.angelmario.material-file-icons</id>
+     <name>Material File Icons Only</name>
+     <category>Appearance</category>
+
+     <vendor url="https://github.com/Angel-Mario">Angel Mario Roque Suárez</vendor>
+
+     <description>
+          <![CDATA[
+    <p>Applies Material Icon Theme icons to files and folders through the IntelliJ file icon provider.</p>
+    <p>Does not install a UI theme or replace toolbar, tool window, or other IDE chrome icons.</p>
+  ]]>
+     </description>
+
+     <depends>com.intellij.modules.platform</depends>
+
+     <extensions defaultExtensionNs="com.intellij">
+          <fileIconProvider implementation="com.angelmario.materialicons.MaterialFileIconProvider" order="first" />
+          <fileIconPatcher implementation="com.angelmario.materialicons.MaterialFileIconPatcher" />
+     </extensions>
+
+</idea-plugin>

@@ -1,0 +1,20 @@
+<idea-plugin>
+  <id>com.angelmario.monokai-ristretto-colors</id>
+  <name>Monokai Pro (Filter Ristretto) Colors</name>
+  <vendor url="https://github.com/Angel-Mario">Angel Mario Roque Suárez</vendor>
+  <idea-version since-build="252.26830" />
+
+  <description><![CDATA[
+    Monokai Pro Filter Ristretto with classic and Islands UI variants, plus editor syntax colors for IntelliJ-based IDEs.
+    This plugin does not include icon assets, icon replacements, or an icon color palette.
+    Based on the community JetBrains adaptation by Subtheme.
+  ]]></description>
+
+  <depends>com.intellij.modules.platform</depends>
+
+  <extensions defaultExtensionNs="com.intellij">
+    <themeProvider id="com.angelmario.monokai-pro-ristretto-islands" path="/monokai-ristretto.theme.json" />
+    <themeProvider id="com.angelmario.monokai-pro-ristretto-classic" path="/monokai-ristretto-classic.theme.json" />
+    <bundledColorScheme id="Monokai Pro (Filter Ristretto)" path="/schemes/ristretto" />
+  </extensions>
+</idea-plugin>

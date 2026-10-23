@@ -1,0 +1,17 @@
+# Gradle
+.gradle/
+build/
+.intellijPlatform/
+.kotlin/
+
+# IntelliJ IDEA / JetBrains IDEs
+.idea/
+*.iml
+out/
+
+# Sandboxes
+sandbox/
+
+# OS
+.DS_Store
+Thumbs.db
