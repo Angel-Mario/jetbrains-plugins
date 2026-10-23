@@ -1,49 +1,49 @@
 # Monokai Pro (Filter Ristretto) Colors
 
-Tema **Monokai Pro (Filter Ristretto)** para IntelliJ IDEA, Rider, PyCharm, WebStorm y cualquier IDE basado en IntelliJ Platform. Es el tema con el que trabajo a diario y lo comparto sin restricciones: **no está detrás de ningún paywall**.
+The **Monokai Pro (Filter Ristretto)** theme for IntelliJ IDEA, Rider, PyCharm, WebStorm, and any IDE based on IntelliJ Platform. It's the theme I work with daily, and I share it with no restrictions: **it is not behind any paywall**.
 
 ![Monokai Pro (Filter Ristretto)](images/monokai-pro-ristretto-small.png)
 
-## Variantes incluidas
+## Included variants
 
-- **Monokai Pro (Filter Ristretto) - Islands**: adapta fondos, pestañas y separaciones a la nueva **Islands UI** de JetBrains.
-- **Monokai Pro (Filter Ristretto) - Sin Islands**: conserva el estilo clásico basado en Darcula.
+- **Monokai Pro (Filter Ristretto) - Islands**: adapts backgrounds, tabs, and separators to JetBrains' new **Islands UI**.
+- **Monokai Pro (Filter Ristretto) - Classic**: keeps the classic Darcula-based look.
 
-Ambas incluyen el esquema de colores del editor (sintaxis) en **Settings → Editor → Color Scheme → Monokai Pro (Filter Ristretto)**.
+Both include the editor syntax color scheme in **Settings → Editor → Color Scheme → Monokai Pro (Filter Ristretto)**.
 
-## Qué NO hace
+## What it does NOT do
 
-- No incluye iconos ni los reemplaza ni cambia su paleta: puedes mantener instalado tu plugin de iconos de archivos y carpetas sin conflictos.
-- No instala keymaps, acciones ni otro tipo de extensiones.
+- Ships no icons and replaces none, and does not change any icon palette: your file icon plugin keeps working alongside it without conflicts.
+- Installs no keymaps, actions, or other extensions.
 
-## Compatibilidad
+## Compatibility
 
-- IntelliJ Platform **2025.2.3** o superior (`sinceBuild = 252.26830`).
-- Funciona en todos los IDE basados en la plataforma (solo depende de `com.intellij.modules.platform`).
-- La variante Islands requiere una build del IDE que incluya la Islands UI (2025.3+).
+- IntelliJ Platform **2025.2.3** or later (`sinceBuild = 252.26830`).
+- Works in every IDE based on the platform (only depends on `com.intellij.modules.platform`).
+- The Islands variant requires an IDE build that ships the Islands UI (2025.3+).
 
-## Instalar
+## Install
 
-Requiere JDK 21 para compilar. Genera el plugin:
+JDK 21 is required to build. Generate the plugin:
 
 ```powershell
 .\gradlew.bat buildPlugin
 ```
 
-Instala `build/distributions/monokai-pro-ristretto-colors-1.0.0.zip` desde **Settings → Plugins → ⚙ → Install Plugin from Disk…**, y elige la variante que prefieras en **Settings → Appearance & Behavior → Appearance & UI → Theme**.
+Install `build/distributions/monokai-pro-ristretto-colors-1.0.0.zip` via **Settings → Plugins → ⚙ → Install Plugin from Disk…**, then pick your preferred variant in **Settings → Appearance & Behavior → Appearance & UI → Theme**.
 
-## Estructura del proyecto
+## Project structure
 
 ```
-src/main/resources/monokai-ristretto.theme.json         Tema Islands
-src/main/resources/monokai-ristretto-classic.theme.json Tema clásico (Darcula)
-src/main/resources/schemes/ristretto.xml                Esquema de colores del editor
-src/main/resources/META-INF/plugin.xml                  Registro del plugin
-images                                                  Captura del tema
+src/main/resources/monokai-ristretto.theme.json         Islands theme
+src/main/resources/monokai-ristretto-classic.theme.json Classic theme (Darcula)
+src/main/resources/schemes/ristretto.xml                Editor color scheme
+src/main/resources/META-INF/plugin.xml                  Plugin registration
+images                                                  Theme screenshot
 ```
 
-## Créditos
+## Credits
 
-Plugin de **Angel Mario Roque Suárez** · [github.com/Angel-Mario](https://github.com/Angel-Mario).
+Plugin by **Angel Mario Roque Suárez** · [github.com/Angel-Mario](https://github.com/Angel-Mario).
 
-La paleta y la adaptación a JetBrains se basan en el proyecto comunitario [Subtheme Monokai Pro](https://github.com/espositocode/monokai-pro). Monokai Pro es una marca de sus titulares; esta es una adaptación no oficial de Filter Ristretto, sin afiliación con Subtheme. Licencia MIT (`LICENSE`).
+The palette and the JetBrains adaptation are based on the community project [Subtheme Monokai Pro](https://github.com/espositocode/monokai-pro). Monokai Pro is a trademark of its owners; this is an unofficial Filter Ristretto adaptation with no affiliation to Subtheme. MIT license (`LICENSE`).

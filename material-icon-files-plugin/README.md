@@ -1,51 +1,51 @@
 # Material File Icons Only
 
-Plugin para IntelliJ IDEA y cualquier IDE basado en IntelliJ Platform (PyCharm, WebStorm, GoLand, CLion, Rider, DataGrip, etc.) que aplica los iconos de **Material Icon Theme** a todos los archivos y carpetas del proyecto.
+Plugin for IntelliJ IDEA and any IDE based on IntelliJ Platform (PyCharm, WebStorm, GoLand, CLion, Rider, DataGrip, etc.) that applies **Material Icon Theme** icons to all project files and folders.
 
-## ¿Qué hace?
+## What it does
 
-- Registra un `FileIconProvider` y un `FileIconPatcher`, por lo que sustituye los iconos de **todos** los ficheros y carpetas en la vista de proyecto, pestañas y donde la plataforma los muestre.
-- Reconoce carpetas abiertas/cerradas, carpetas raíz del proyecto y proyectos multi-módulo.
-- Iconos distintos para tema claro y oscuro, escalados a 16px para verse nítidos.
-- **No** instala un tema visual ni un esquema de colores.
-- **No** toca los iconos del toolbar, de las tool windows ni del resto del IDE: solo archivadores y archivos.
+- Registers a `FileIconProvider` and a `FileIconPatcher`, so it replaces the icons of **every** file and folder in the project view, editor tabs, and anywhere else the platform renders them.
+- Detects expanded/collapsed folders, project content roots, and multi-module projects.
+- Different icons for light and dark themes, scaled to 16px so they stay crisp.
+- Does **not** install a UI theme or a color scheme.
+- Does **not** touch toolbar icons, tool window icons, or any other IDE chrome: only folders and files.
 
-La razón de este plugin: el plugin existente de Material Icons en JetBrains no sustituía todos los iconos de ficheros y cambiaba los iconos del toolbar, lo que no me gustaba. Este se limita exclusivamente a archivos y carpetas.
+Why this plugin exists: the existing Material Icons plugin for JetBrains did not replace every file icon, and it also changed the toolbar icons — which I didn't like. This one is strictly limited to files and folders.
 
-## Compatibilidad
+## Compatibility
 
-- IntelliJ Platform **2025.1** o superior (`sinceBuild = 251`).
-- Cualquier IDE basado en la plataforma (desde 2025.1 incluye IDEA, PyCharm, WebStorm, Rider, etc.).
-- Solo depende de `com.intellij.modules.platform`, no de funcionalidades de ningún lenguaje.
+- IntelliJ Platform **2025.1** or later (`sinceBuild = 251`).
+- Any IDE based on the platform (IDEA, PyCharm, WebStorm, Rider, etc. since 2025.1).
+- Only depends on `com.intellij.modules.platform`; no language plugin dependency.
 
-## Compilar e instalar
+## Build and install
 
-Requiere JDK 21. Para crear el archivo instalable:
+Requires JDK 21. To create the installable archive:
 
 ```bash
 ./gradlew buildPlugin
 ```
 
-El ZIP se genera en `build/distributions/`. En el IDE, usa **Settings → Plugins → ⚙ → Install Plugin from Disk…** y selecciona ese ZIP.
+The ZIP is generated in `build/distributions/`. In the IDE, use **Settings → Plugins → ⚙ → Install Plugin from Disk…** and pick that ZIP.
 
-Para abrir un IDE sandbox con el plugin cargado:
+To launch a sandbox IDE with the plugin loaded:
 
 ```bash
 ./gradlew runIde
 ```
 
-## Estructura del proyecto
+## Project structure
 
 ```
-src/main/kotlin/com/angelmario/materialicons   Código Kotlin del provider/patcher
-src/main/resources/META-INF                   plugin.xml y icono del plugin
-assets/material-icons.json                    Asociaciones archivo → icono (formato VS Code)
-assets/icons                                  SVGs del icon set
+src/main/kotlin/com/angelmario/materialicons   Kotlin provider/patcher code
+src/main/resources/META-INF                   plugin.xml and plugin icon
+assets/material-icons.json                    File → icon mappings (VS Code format)
+assets/icons                                  Icon set SVGs
 ```
 
-## Recursos y créditos
+## Resources and credits
 
-- Las asociaciones de nombres y extensiones, y las ilustraciones SVG provienen de [Material Icon Theme](https://github.com/material-extensions/vscode-material-icon-theme) (licencia MIT).
-- La integración con la plataforma JetBrains parte de la idea original de cweijan; esta versión añade el `FileIconPatcher`, carpetas expandidas, soporte de tema claro y reemplazo completo de ficheros.
+- The file/folder name and extension mappings, and the SVG artwork, come from [Material Icon Theme](https://github.com/material-extensions/vscode-material-icon-theme) (MIT license).
+- The JetBrains platform integration is based on cweijan's original idea; this version adds the `FileIconPatcher`, expanded folders, light theme support, and complete file replacement.
 
-Plugin de **Angel Mario Roque Suárez** · [github.com/Angel-Mario](https://github.com/Angel-Mario) · Licencia MIT (`LICENSE`).
+Plugin by **Angel Mario Roque Suárez** · [github.com/Angel-Mario](https://github.com/Angel-Mario) · MIT license (`LICENSE`).
