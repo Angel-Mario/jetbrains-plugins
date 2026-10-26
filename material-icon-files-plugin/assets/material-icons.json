@@ -2421,6 +2421,12 @@
     "folder-database-open": {
       "iconPath": "./../icons/folder-database-open.svg"
     },
+    "folder-dtos": {
+      "iconPath": "./../icons/folder-dtos.svg"
+    },
+    "folder-dtos-open": {
+      "iconPath": "./../icons/folder-dtos-open.svg"
+    },
     "folder-migrations": {
       "iconPath": "./../icons/folder-migrations.svg"
     },
@@ -3776,6 +3782,7 @@
     }
   },
   "folderNames": {
+    "dtos": "folder-dtos",
     "rust": "folder-rust",
     ".rust": "folder-rust",
     "_rust": "folder-rust",
@@ -8432,6 +8439,7 @@
     "__redislabs__": "folder-redis"
   },
   "folderNamesExpanded": {
+    "dtos": "folder-dtos-open",
     "rust": "folder-rust-open",
     ".rust": "folder-rust-open",
     "_rust": "folder-rust-open",

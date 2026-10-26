@@ -11,7 +11,7 @@ java {
 }
 
 group = "com.angelmario"
-version = "1.0.0"
+version = "1.0.1"
 
 repositories {
     mavenCentral()
@@ -39,6 +39,7 @@ intellijPlatform {
         }
 
         changeNotes = """
+      1.0.1: Custom non-generic icon for Dtos folders.
       Material icons for files and folders.
     """.trimIndent()
     }

@@ -7,6 +7,7 @@ Plugin for IntelliJ IDEA and any IDE based on IntelliJ Platform (PyCharm, WebSto
 - Registers a `FileIconProvider` and a `FileIconPatcher`, so it replaces the icons of **every** file and folder in the project view, editor tabs, and anywhere else the platform renders them.
 - Detects expanded/collapsed folders, project content roots, and multi-module projects.
 - Different icons for light and dark themes, scaled to 16px so they stay crisp.
+- Custom non-generic folder icon for `Dtos` folders (added in v1.0.1, matching is case-insensitive).
 - Does **not** install a UI theme or a color scheme.
 - Does **not** touch toolbar icons, tool window icons, or any other IDE chrome: only folders and files.
 
